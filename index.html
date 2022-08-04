@@ -4,6 +4,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+      .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .solid-variant {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: #9c9efe;
+        border: 2px #9c9efe solid;
+        color: white;
+        border-radius: 5px;
+      }
+
       .outline-variant {
         padding-left: 15px;
         padding-right: 15px;
@@ -17,28 +36,8 @@
   </head>
   <body>
     <div id="root" style="height: 100%; width: 100%; background-color: white">
-      <div
-        style="
-          display: flex;
-          gap: 20px;
-          justify-content: center;
-          align-items: center;
-          height: 100%;
-        "
-      >
-        <div
-          style="
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            background-color: #9c9efe;
-            border: 2px #9c9efe solid;
-            color: white;
-            border-radius: 5px;
-          "
-          data-component-name="Button-Solid"
-        >
+      <div class="container">
+        <div class="solid-variant" data-component-name="Button-Solid">
           <div role="button">Submit</div>
         </div>
         <div class="outline-variant" data-component-name="Button-Outline">
