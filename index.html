@@ -3,6 +3,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .outline-variant {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border: 2px #9c9efe solid;
+        border-radius: 5px;
+      }
+    </style>
     <title>Button Component</title>
   </head>
   <body>
@@ -31,17 +41,7 @@
         >
           <div role="button">Submit</div>
         </div>
-        <div
-          style="
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            border: 2px #9c9efe solid;
-            border-radius: 5px;
-          "
-          data-component-name="Button-Outline"
-        >
+        <div class="outline-variant" data-component-name="Button-Outline">
           <div role="button">Submit</div>
         </div>
       </div>
