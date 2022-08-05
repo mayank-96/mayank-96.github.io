@@ -6,6 +6,15 @@
     <style>
       .container {
         display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .variant-container {
+        display: flex;
+        flex-direction: column;
         gap: 20px;
         justify-content: center;
         align-items: center;
@@ -17,10 +26,23 @@
         padding-right: 15px;
         padding-top: 8px;
         padding-bottom: 8px;
-        background-color: #9c9efe;
-        border: 2px #9c9efe solid;
         color: white;
         border-radius: 5px;
+      }
+
+      .solid-blue {
+        background-color: #9c9efe;
+        border: 2px #9c9efe solid;
+      }
+
+      .solid-red {
+        background-color: #eb4747;
+        border: 2px #eb4747 solid;
+      }
+
+      .solid-green {
+        background-color: #59ce8f;
+        border: 2px #59ce8f solid;
       }
 
       .outline-variant {
@@ -28,8 +50,19 @@
         padding-right: 15px;
         padding-top: 8px;
         padding-bottom: 8px;
-        border: 2px #9c9efe solid;
         border-radius: 5px;
+      }
+
+      .outline-blue {
+        border: 2px #9c9efe solid;
+      }
+
+      .outline-red {
+        border: 2px #eb4747 solid;
+      }
+
+      .outline-green {
+        border: 2px #59ce8f solid;
       }
     </style>
     <title>Button Component</title>
@@ -37,17 +70,45 @@
   <body>
     <div id="root" style="height: 100%; width: 100%; background-color: white">
       <div class="container">
-        <div
-          class="solid-variant"
-          data-component-props='{"name": "Button", "variant": "solid", "color": "primary", "size": "medium", "type": "main"}'
-        >
-          <div role="button">Submit</div>
+        <div class="variant-container">
+          <div
+            class="solid-variant solid-blue"
+            data-component-props='{"name": "Button", "variant": "solid", "color": "blue", "size": "medium"}'
+          >
+            <div role="button">Submit</div>
+          </div>
+          <div
+            class="solid-variant solid-red"
+            data-component-props='{"name": "Button", "variant": "solid", "color": "red", "size": "medium"}'
+          >
+            <div role="button">Submit</div>
+          </div>
+          <div
+            class="solid-variant solid-green"
+            data-component-props='{"name": "Button", "variant": "solid", "color": "green", "size": "medium"}'
+          >
+            <div role="button">Submit</div>
+          </div>
         </div>
-        <div
-          class="outline-variant"
-          data-component-props='{"name": "Button", "variant": "outline", "color": "primary", "size": "medium", "type": "variant"}'
-        >
-          <div role="button">Submit</div>
+        <div class="variant-container">
+          <div
+            class="outline-variant outline-blue"
+            data-component-props='{"name": "Button", "variant": "outline", "color": "blue", "size": "medium" }'
+          >
+            <div role="button">Submit</div>
+          </div>
+          <div
+            class="outline-variant outline-red"
+            data-component-props='{"name": "Button", "variant": "outline", "color": "red", "size": "medium" }'
+          >
+            <div role="button">Submit</div>
+          </div>
+          <div
+            class="outline-variant outline-green"
+            data-component-props='{"name": "Button", "variant": "outline", "color": "green", "size": "medium"}'
+          >
+            <div role="button">Submit</div>
+          </div>
         </div>
       </div>
     </div>
