@@ -28,6 +28,9 @@
         padding-bottom: 8px;
         color: white;
         border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
       .solid-blue {
@@ -51,6 +54,9 @@
         padding-top: 8px;
         padding-bottom: 8px;
         border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
       .outline-blue {
@@ -64,6 +70,18 @@
       .outline-green {
         border: 2px #59ce8f solid;
       }
+
+      .svg-solid {
+        color: rgb(250, 250, 250);
+        height: 16px;
+        width: 16px;
+      }
+
+      .svg-outline {
+        color: rgb(0, 0, 0);
+        height: 16px;
+        width: 16px;
+      }
     </style>
     <title>Button Component</title>
   </head>
@@ -75,6 +93,15 @@
             class="solid-variant solid-blue"
             data-component-props='{"name": "Button", "variant": "solid", "color": "blue", "size": "medium"}'
           >
+            <svg viewBox="0 0 24 24" stroke="" role="img" class="svg-solid">
+              <g>
+                <path
+                  fill="currentColor"
+                  d="M13.25 10.75V2H10.75V10.75H2V13.25H10.75V22H13.25V13.25H22V10.75H13.25Z"
+                  stroke=""
+                ></path>
+              </g>
+            </svg>
             <div role="button">Submit</div>
           </div>
           <div
@@ -95,6 +122,15 @@
             class="outline-variant outline-blue"
             data-component-props='{"name": "Button", "variant": "outline", "color": "blue", "size": "medium" }'
           >
+            <svg viewBox="0 0 24 24" stroke="" role="img" class="svg-outline">
+              <g>
+                <path
+                  fill="currentColor"
+                  d="M13.25 10.75V2H10.75V10.75H2V13.25H10.75V22H13.25V13.25H22V10.75H13.25Z"
+                  stroke=""
+                ></path>
+              </g>
+            </svg>
             <div role="button">Submit</div>
           </div>
           <div
