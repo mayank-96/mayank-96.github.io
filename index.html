@@ -83,16 +83,20 @@
         width: 16px;
       }
 
-      .image {
-        /* inset: 0px; */
+      .image-sm {
         height: 200px;
         width: 200px;
+      }
+
+      .image-lg {
+        height: 400px;
+        width: 400px;
+      }
+
+      .image {
+        width: 100%;
+        height: 100%;
         border-radius: 10px;
-        border: 5px solid #59ce8f;
-        /* opacity: 0; */
-        /* position: absolute; */
-        /* width: 100%; */
-        /* z-index: -1; */
       }
     </style>
     <title>Button Component</title>
@@ -159,12 +163,29 @@
           </div>
         </div>
         <div class="variant-image">
-          <img
-            alt="Alternate Text"
-            draggable="false"
-            src="https://wallpaperaccess.com/full/317501.jpg"
-            class="image"
-          />
+          <div
+            class="image-sm"
+            data-component-props='{"name": "Image", "variant": "small", "size": "small" }'
+          >
+            <img
+              alt="Alternate Text"
+              draggable="false"
+              src="https://wallpaperaccess.com/full/317501.jpg"
+              class="image"
+            />
+          </div>
+        </div>
+        <div
+            class="image-lg"
+            data-component-props='{"name": "Image", "variant": "large", "size": "large" }'
+          >
+            <img
+              alt="Alternate Text"
+              draggable="false"
+              src="https://wallpaperaccess.com/full/314701.jpg"
+              class="image"
+            />
+          </div>
         </div>
       </div>
     </div>
