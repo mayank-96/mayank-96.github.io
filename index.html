@@ -97,17 +97,30 @@
         width: 16px;
       }
 
-      .image-sm {
+      .variant-image {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .image-green {
         height: 100px;
         width: 100px;
-        border-radius: 50px;
+        border-radius: 10px;
         border: 5px solid #59ce8f;
         overflow: hidden;
       }
 
-      .image-lg {
-        height: 200px;
-        width: 200px;
+      .image-blue {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
         border: 5px solid #9c9efe;
         overflow: hidden;
       }
@@ -118,6 +131,7 @@
       }
 
     </style>
+
     <title>Button Component</title>
   </head>
   <body>
@@ -183,7 +197,18 @@
         </div>
         <div class="variant-image">
           <div
-            class="image-sm"
+            class="image-blue"
+            data-component-props='{"name": "Image", "variant": "rounded", "size": "small", "color": "blue" }'
+          >
+            <img
+              alt="Alternate Text"
+              draggable="false"
+              src="https://wallpaperaccess.com/full/317501.jpg"
+              class="image"
+            />
+          </div>
+          <div
+            class="image-green"
             data-component-props='{"name": "Image", "variant": "rounded", "size": "small", "color": "green" }'
           >
             <img
@@ -193,8 +218,7 @@
               class="image"
             />
           </div>
-        </div>
-        <div
+          <!-- <div
             class="image-lg"
             data-component-props='{"name": "Image", "variant": "sqaure", "size": "large", "color": "blue" }'
           >
@@ -203,7 +227,9 @@
               src="https://wallpaperaccess.com/full/317501.jpg"
               class="image"
             />
-          </div>
+          </div> -->
+        </div>
+        
         </div>
       </div>
     </div>
