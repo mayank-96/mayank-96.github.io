@@ -152,6 +152,33 @@
         width: 100%;
         height: 100%;
       }
+
+      .alert-box {
+        border-radius: 8px;
+        filter: drop-shadow(0px 3px 4.65px rgba(0, 0, 0, 0.29));
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #fafafa;
+      }
+
+      .delete-text {
+        padding: 16px;
+        flex: 1;
+      }
+
+      .alert-body {
+        padding: 16px;
+        font-size: 13px;
+        width: 400px;
+      }
+
+      .btn-group {
+        gap: 10px;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
     </style>
     <title>Button Component</title>
   </head>
@@ -272,16 +299,7 @@
           <div
             data-component-props='{"name": "AlertDialog", "variant": "rounded", "size": "small", "color": "red" }'
           >
-            <div
-              style="
-                border-radius: 8px;
-                filter: drop-shadow(0px 3px 4.65px rgba(0, 0, 0, 0.29));
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background-color: #fafafa;
-              "
-            >
+            <div class="alert-box">
               <div
                 style="
                   border-radius: 8px 8px 0px 0px;
@@ -291,20 +309,13 @@
                   width: 100%;
                 "
               >
-                <div style="padding: 16px; flex: 1">Delete Customer</div>
+                <div class="delete-text">Delete Customer</div>
               </div>
-              <div style="padding: 16px; font-size: 13px; width: 400px">
+              <div class="alert-body">
                 This will remove all data relating to Alex. This action cannot
                 be reversed. Deleted data can not be recovered.
               </div>
-              <div
-                style="
-                  gap: 10px;
-                  display: flex;
-                  justify-content: flex-end;
-                  width: 100%;
-                "
-              >
+              <div class="btn-group">
                 <div
                   class="outline-variant outline-red"
                   data-component-props='{"instance": "Button-outline", "variant": "red-medium" }'
