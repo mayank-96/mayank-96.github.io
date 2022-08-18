@@ -1,1369 +1,334 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <style data-next-hide-fouc="true">
-      body {
-        display: none;
-      }
-    </style>
-    <noscript data-next-hide-fouc="true"
-      ><style>
-        body {
-          display: block;
-        }
-      </style></noscript
-    >
-    <meta charset="utf-8" />
-    <title>DSX: Build &amp; Document Design Systems</title>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.svg" />
-    <meta
-      property="og:title"
-      content="DSX: Build &amp; Document Design Systems"
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
     />
-    <meta
-      property="og:description"
-      content="NativeBase DSX helps you build your own design system on top of NativeBase."
-    />
-    <meta property="og:url" content="https://dsx.nativebase.io" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:logo" content="/img/logo-dsx.png" />
-    <meta property="og:site_name" content="NativeBase DSX" />
-    <meta
-      name="twitter:image:alt"
-      content="NativeBase DSX helps you build your own design system on top of NativeBase."
-    />
-    <meta property="og:image" content="/img/og-image.png" />
-    <meta name="twitter:image" content="/img/og-image.png" />
-    <meta name="twitter:site" content="@nativebase" />
-    <meta name="next-head-count" content="14" />
-    <noscript data-n-css=""></noscript>
-    <script
-      defer=""
-      nomodule=""
-      src="/_next/static/chunks/polyfills.js?ts=1660816767622"
-    ></script>
-    <script
-      src="/_next/static/chunks/webpack.js?ts=1660816767622"
-      defer=""
-    ></script>
-    <script
-      src="/_next/static/chunks/main.js?ts=1660816767622"
-      defer=""
-    ></script>
-    <script
-      src="/_next/static/chunks/pages/_app.js?ts=1660816767622"
-      defer=""
-    ></script>
-    <script
-      src="/_next/static/chunks/pages/htmlPreview/%5B%5B...slug%5D%5D.js?ts=1660816767622"
-      defer=""
-    ></script>
-    <script
-      src="/_next/static/development/_buildManifest.js?ts=1660816767622"
-      defer=""
-    ></script>
-    <script
-      src="/_next/static/development/_ssgManifest.js?ts=1660816767622"
-      defer=""
-    ></script>
-    <script
-      src="/_next/static/development/_middlewareManifest.js?ts=1660816767622"
-      defer=""
-    ></script>
-    <noscript id="__next_css__DO_NOT_USE__"></noscript>
     <style>
-      html,
-      body,
-      #__next {
-        width: 100%;
-        /* To smooth any scrolling behavior */
-        -webkit-overflow-scrolling: touch;
-        margin: 0px;
-        padding: 0px;
-        /* Allows content to fill the viewport and go beyond the bottom */
-        min-height: 100%;
-      }
-      #__next {
-        flex-shrink: 0;
-        flex-basis: auto;
-        flex-direction: column;
-        flex-grow: 1;
-        display: flex;
-        flex: 1;
-      }
-      html {
-        scroll-behavior: smooth;
-        -webkit-text-size-adjust: 100%;
-        height: 100%;
-      }
-      body {
-        display: flex;
-        overflow-y: auto;
-        overscroll-behavior-y: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -ms-overflow-style: scrollbar;
-      }
-    </style>
-    <style id="react-native-stylesheet">
-      [stylesheet-group="0"] {
-      }
-      html {
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      }
-      body {
+      * {
         margin: 0;
       }
-      button::-moz-focus-inner,
-      input::-moz-focus-inner {
-        border: 0;
-        padding: 0;
+
+      body {
+        font-family: "Silkscreen", cursive;
       }
-      input::-webkit-search-cancel-button,
-      input::-webkit-search-decoration,
-      input::-webkit-search-results-button,
-      input::-webkit-search-results-decoration {
-        display: none;
+
+      .root {
+        height: 100vh;
+        width: 100%;
+        background-color: white;
       }
-      [stylesheet-group="0.1"] {
-      }
-      :focus:not([data-focusvisible-polyfill]) {
-        outline: none;
-      }
-      [stylesheet-group="0.5"] {
-      }
-      .css-cursor-18t94o4 {
-        cursor: pointer;
-      }
-      [stylesheet-group="1"] {
-      }
-      .css-view-1dbjc4n {
-        -ms-flex-align: stretch;
-        -ms-flex-direction: column;
-        -ms-flex-negative: 0;
-        -ms-flex-preferred-size: auto;
-        -webkit-align-items: stretch;
-        -webkit-box-align: stretch;
-        -webkit-box-direction: normal;
-        -webkit-box-orient: vertical;
-        -webkit-flex-basis: auto;
-        -webkit-flex-direction: column;
-        -webkit-flex-shrink: 0;
-        align-items: stretch;
-        border: 0 solid black;
-        box-sizing: border-box;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
+
+      .vertical-container {
+        height: 100%;
         display: flex;
-        flex-basis: auto;
         flex-direction: column;
-        flex-shrink: 0;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        min-height: 0px;
-        min-width: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 0px;
-        position: relative;
-        z-index: 0;
-      }
-      .css-text-901oao {
-        border: 0 solid black;
-        box-sizing: border-box;
-        color: rgba(0, 0, 0, 1);
-        display: inline;
-        font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 0px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-      }
-      [stylesheet-group="2"] {
-      }
-      .r-flex-13awgt0 {
-        -ms-flex: 1 1 0%;
-        -webkit-flex: 1;
-        flex: 1;
-      }
-      .r-borderRadius-z2wwpe {
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-      }
-      .r-borderColor-16kf3px {
-        border-bottom-color: rgba(249, 168, 212, 1);
-        border-left-color: rgba(249, 168, 212, 1);
-        border-right-color: rgba(249, 168, 212, 1);
-        border-top-color: rgba(249, 168, 212, 1);
-      }
-      .r-borderWidth-rs99b7 {
-        border-bottom-width: 1px;
-        border-left-width: 1px;
-        border-right-width: 1px;
-        border-top-width: 1px;
-      }
-      .r-borderColor-11bz3f3 {
-        border-bottom-color: rgba(147, 197, 253, 1);
-        border-left-color: rgba(147, 197, 253, 1);
-        border-right-color: rgba(147, 197, 253, 1);
-        border-top-color: rgba(147, 197, 253, 1);
-      }
-      .r-borderColor-1rp4bhw {
-        border-bottom-color: rgba(134, 239, 172, 1);
-        border-left-color: rgba(134, 239, 172, 1);
-        border-right-color: rgba(134, 239, 172, 1);
-        border-top-color: rgba(134, 239, 172, 1);
-      }
-      .r-borderColor-1fwaayb {
-        border-bottom-color: rgba(236, 72, 153, 1);
-        border-left-color: rgba(236, 72, 153, 1);
-        border-right-color: rgba(236, 72, 153, 1);
-        border-top-color: rgba(236, 72, 153, 1);
-      }
-      .r-borderColor-uu4yxx {
-        border-bottom-color: rgba(59, 130, 246, 1);
-        border-left-color: rgba(59, 130, 246, 1);
-        border-right-color: rgba(59, 130, 246, 1);
-        border-top-color: rgba(59, 130, 246, 1);
-      }
-      .r-borderColor-16z9ajc {
-        border-bottom-color: rgba(34, 197, 94, 1);
-        border-left-color: rgba(34, 197, 94, 1);
-        border-right-color: rgba(34, 197, 94, 1);
-        border-top-color: rgba(34, 197, 94, 1);
-      }
-      [stylesheet-group="2.2"] {
-      }
-      .r-alignItems-1awozwy {
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
+        gap: 20px;
+        justify-content: center;
         align-items: center;
       }
-      .r-cursor-1loqt21 {
-        cursor: pointer;
-      }
-      .r-touchAction-1otgn73 {
-        -ms-touch-action: manipulation;
-        touch-action: manipulation;
-      }
-      .r-backgroundColor-el9fpp {
-        background-color: rgba(236, 72, 153, 1);
-      }
-      .r-flexDirection-18u37iz {
-        -ms-flex-direction: row;
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-      }
-      .r-justifyContent-1777fci {
-        -ms-flex-pack: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
+
+      .container {
+        display: flex;
+        gap: 40px;
         justify-content: center;
+        align-items: center;
       }
-      .r-outlineWidth-10paoce {
-        outline-width: 0px;
+
+      .variant-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
       }
-      .r-paddingBottom-xd6kpl {
-        padding-bottom: 8px;
-      }
-      .r-paddingLeft-1m04atk {
-        padding-left: 8px;
-      }
-      .r-paddingRight-1pyaxff {
-        padding-right: 8px;
-      }
-      .r-paddingTop-tskmnb {
+
+      .solid-variant {
+        padding-left: 15px;
+        padding-right: 15px;
         padding-top: 8px;
+        padding-bottom: 8px;
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
-      .r-userSelect-lrvibr {
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
+
+      .solid-blue {
+        background-color: #9c9efe;
+        border: 2px #9c9efe solid;
       }
-      .r-gap-1cmwbt1 {
-        gap: 8px;
+
+      .solid-red {
+        background-color: #eb4747;
+        border: 2px #eb4747 solid;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
-      .r-color-1qar9k {
-        color: rgba(31, 41, 55, 1);
+
+      .solid-green {
+        background-color: #59ce8f;
+        border: 2px #59ce8f solid;
       }
-      .r-fontSize-1enofrn {
-        font-size: 12px;
+
+      .outline-variant {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
-      .r-fontStyle-13uqrnb {
-        font-style: normal;
+
+      .outline-blue {
+        border: 2px #9c9efe solid;
       }
-      .r-fontWeight-majxgm {
-        font-weight: 500;
+
+      .outline-red {
+        border: 2px #eb4747 solid;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
       }
-      .r-letterSpacing-oxtfae {
-        letter-spacing: 0px;
+
+      .outline-green {
+        border: 2px #59ce8f solid;
       }
-      .r-lineHeight-dhbnww {
-        line-height: 1.5em;
+
+      .svg-solid {
+        color: #ffffff;
+        height: 16px;
+        width: 16px;
       }
-      .r-backgroundColor-1niwhzg {
-        background-color: rgba(0, 0, 0, 0);
+
+      .svg-outline {
+        color: #000000;
+        height: 16px;
+        width: 16px;
       }
-      .r-color-84gixx {
-        color: rgba(236, 72, 153, 1);
+
+      .variant-image {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
-      .r-textDecorationLine-1ddef8g {
-        -webkit-text-decoration-line: underline;
-        text-decoration-line: underline;
+
+      .image-green {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        border: 5px solid #59ce8f;
+        overflow: hidden;
       }
-      .r-backgroundColor-zpf9xq {
-        background-color: rgba(59, 130, 246, 1);
+
+      .image-blue {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        border: 5px solid #9c9efe;
+        overflow: hidden;
       }
-      .r-color-159ydal {
-        color: rgba(59, 130, 246, 1);
+
+      .image {
+        width: 100%;
+        height: 100%;
       }
-      .r-backgroundColor-1h8ng64 {
-        background-color: rgba(34, 197, 94, 1);
+
+      .alert-box {
+        border-radius: 8px;
+        filter: drop-shadow(0px 3px 4.65px rgba(0, 0, 0, 0.29));
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #fafafa;
       }
-      .r-color-1jbrlb3 {
-        color: rgba(34, 197, 94, 1);
+
+      .delete-text {
+        padding: 16px;
+        flex: 1;
       }
-      .r-paddingLeft-f727ji {
-        padding-left: 12px;
+
+      .alert-body {
+        padding: 16px;
+        font-size: 13px;
+        width: 400px;
       }
-      .r-paddingRight-j2kj52 {
-        padding-right: 12px;
-      }
-      .r-fontSize-1b43r93 {
-        font-size: 14px;
-      }
-      .r-paddingLeft-1qhn6m8 {
-        padding-left: 16px;
-      }
-      .r-paddingRight-i023vh {
-        padding-right: 16px;
-      }
-      .r-fontSize-ubezar {
-        font-size: 16px;
-      }
-      .r-backgroundColor-1j3d57o {
-        background-color: rgba(219, 39, 119, 1);
-      }
-      .r-backgroundColor-1gvyc6z {
-        background-color: rgba(251, 207, 232, 0.5);
-      }
-      .r-color-1vfzgvq {
-        color: rgba(219, 39, 119, 1);
-      }
-      .r-backgroundColor-tg9xy0 {
-        background-color: rgba(37, 99, 235, 1);
-      }
-      .r-backgroundColor-1oaetuo {
-        background-color: rgba(191, 219, 254, 0.5);
-      }
-      .r-color-c4gyn4 {
-        color: rgba(37, 99, 235, 1);
-      }
-      .r-backgroundColor-1bbz6r5 {
-        background-color: rgba(22, 163, 74, 1);
-      }
-      .r-backgroundColor-1ofg2t7 {
-        background-color: rgba(187, 247, 208, 0.5);
-      }
-      .r-color-1jls995 {
-        color: rgba(22, 163, 74, 1);
+
+      .btn-group {
+        gap: 10px;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
       }
     </style>
+    <title>Button Component</title>
   </head>
   <body>
-    <div id="__next">
-      <div class="css-view-1dbjc4n r-flex-13awgt0">
-        <div class="css-view-1dbjc4n r-alignItems-1awozwy">
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-el9fpp r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
+    <div id="root" class="root">
+      <div class="vertical-container">
+        <div class="container">
+          <div class="svg-div">
+            <svg
+              width="104"
+              height="119"
+              viewBox="0 0 104 119"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
+              <path
+                d="M104 84.631C104 86.0038 103.64 87.3524 102.955 88.5412C102.271 89.73 101.286 90.7172 100.101 91.4036L55.8989 117.006C54.7135 117.693 53.3688 118.054 52 118.054C50.6312 118.054 49.2865 117.693 48.1011 117.006L3.89895 91.4036C2.71362 90.7172 1.72929 89.73 1.04489 88.5412C0.360489 87.3524 0.00012207 86.0038 7.62939e-06 84.631V33.423C-0.00235748 32.0478 0.356827 30.6963 1.04135 29.5048C1.72588 28.3133 2.71154 27.3238 3.89895 26.6363L48.1011 1.04782C49.2865 0.361382 50.6312 0 52 0C53.3688 0 54.7135 0.361382 55.8989 1.04782L100.101 26.6363C101.288 27.3238 102.274 28.3133 102.959 29.5048C103.643 30.6963 104.002 32.0478 104 33.423V84.631Z"
+                fill="#356290"
+              ></path>
+              <path
+                d="M96.418 78.6828C96.4176 80.5311 95.9323 82.3467 95.0109 83.9474C94.0895 85.548 92.7643 86.8773 91.1685 87.8017L57.2647 107.445C55.6682 108.369 53.8573 108.856 52.0138 108.856C50.1704 108.856 48.3595 108.369 46.763 107.445L12.8592 87.8017C11.263 86.8771 9.93755 85.5473 9.01608 83.9461C8.09463 82.345 7.60959 80.5287 7.60972 78.68V39.3962C7.6075 37.5504 8.08893 35.7364 9.00578 34.136C9.92262 32.5356 11.2427 31.2049 12.8337 30.2773L46.7489 10.6397C48.3453 9.7152 50.1563 9.22852 51.9997 9.22852C53.8432 9.22852 55.6541 9.7152 57.2506 10.6397L91.1544 30.283C92.752 31.2051 94.0794 32.5327 95.0034 34.1324C95.9273 35.7321 96.4152 37.5475 96.418 39.3962V78.6828Z"
+                fill="#1784B2"
+              ></path>
+              <path
+                d="M89.1445 76.8794C89.1446 77.9914 88.8527 79.0839 88.2982 80.047C87.7437 81.01 86.9462 81.8096 85.9858 82.3654L55.1531 100.218C54.1932 100.774 53.1043 101.066 51.9958 101.066C50.8874 101.066 49.7985 100.774 48.8385 100.218L18.0058 82.3654C17.0455 81.8096 16.2479 81.01 15.6934 80.047C15.1389 79.0839 14.8471 77.9914 14.8471 76.8794V41.1774C14.8486 40.0657 15.1418 38.974 15.6973 38.012C16.2527 37.05 17.0509 36.2516 18.0115 35.697L48.8414 17.8446C49.8013 17.2887 50.8902 16.9961 51.9987 16.9961C53.1071 16.9961 54.196 17.2887 55.156 17.8446L85.9858 35.697C86.9454 36.2523 87.7424 37.051 88.2968 38.013C88.8513 38.975 89.1436 40.0663 89.1445 41.1774V76.8794Z"
+                fill="#50BFC3"
+              ></path>
+              <path
+                d="M42.4309 70.4837V63.9973L31.1607 60.1973L42.4309 56.2981V49.8061L24.1172 57.3296V62.9602L42.4309 70.4837ZM49.1184 75.5589L59.5326 42.5234H54.447L44.03 75.556L49.1184 75.5589ZM61.5498 70.4837L79.8636 62.9007V57.2899L61.5498 49.8061V56.454L71.7888 60.4948L61.5498 63.8585V70.4837Z"
+                fill="white"
+              ></path>
+            </svg>
+          </div>
+          <div class="variant-container">
+            <div
+              class="solid-variant solid-blue"
+              data-component-props='{"name": "Button", "variant": "solid", "color": "blue", "size": "medium"}'
+            >
+              <svg viewBox="0 0 24 24" stroke="" role="img" class="svg-solid">
+                <g>
+                  <path
+                    fill="#ffffff"
+                    d="M13.25 10.75V2H10.75V10.75H2V13.25H10.75V22H13.25V13.25H22V10.75H13.25Z"
+                    stroke=""
+                  ></path>
+                </g>
+              </svg>
+              <div role="button">Submit</div>
+            </div>
+            <div
+              class="solid-variant solid-red"
+              data-component-props='{"name": "Button", "variant": "solid", "color": "red", "size": "medium"}'
+            >
+              <div role="button">Submit</div>
+            </div>
+            <div
+              class="solid-variant solid-green"
+              data-component-props='{"name": "Button", "variant": "solid", "color": "green", "size": "medium"}'
+            >
+              <div role="button">Submit</div>
             </div>
           </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-16kf3px r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
+          <div class="variant-container">
             <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
+              class="outline-variant outline-blue"
+              data-component-props='{"name": "Button", "variant": "outline", "color": "blue", "size": "medium" }'
             >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
+              <svg viewBox="0 0 24 24" stroke="" role="img" class="svg-outline">
+                <g>
+                  <path
+                    fill="#000000"
+                    d="M13.25 10.75V2H10.75V10.75H2V13.25H10.75V22H13.25V13.25H22V10.75H13.25Z"
+                    stroke=""
+                  ></path>
+                </g>
+              </svg>
+              <div role="button">Submit</div>
+            </div>
+            <div
+              class="outline-variant outline-red"
+              data-component-props='{"name": "Button", "variant": "outline", "color": "red", "size": "medium" }'
+            >
+              <div role="button">Submit</div>
+            </div>
+            <div
+              class="outline-variant outline-green"
+              data-component-props='{"name": "Button", "variant": "outline", "color": "green", "size": "medium"}'
+            >
+              <div role="button">Submit</div>
             </div>
           </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
+          <div class="variant-image">
             <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
+              class="image-blue"
+              data-component-props='{"name": "Image", "variant": "rounded", "size": "small", "color": "blue" }'
             >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
+              <img
+                alt="Alternate Text"
+                draggable="false"
+                src="https://wallpaperaccess.com/full/317501.jpg"
+                class="image"
+              />
+            </div>
+            <div
+              class="image-green"
+              data-component-props='{"name": "Image", "variant": "rounded", "size": "small", "color": "green" }'
+            >
+              <img
+                alt="Alternate Text"
+                draggable="false"
+                src="https://wallpaperaccess.com/full/317501.jpg"
+                class="image"
+              />
             </div>
           </div>
+        </div>
+        <div class="variant-alert-dialog">
           <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-zpf9xq r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
+            data-component-props='{"name": "AlertDialog", "variant": "rounded", "size": "small", "color": "red" }'
           >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
+            <div>
+              <div class="alert-box">
                 <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
+                  style="
+                    border-radius: 8px 8px 0px 0px;
+                    border-width: 0px 0px 1px 0px;
+                    border-style: solid;
+                    border-color: #d4d4d4;
+                    width: 100%;
+                  "
                 >
-                  Button
+                  <div class="delete-text">Delete Customer</div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-11bz3f3 r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
+                <div class="alert-body">
+                  This will remove all data relating to Alex. This action cannot
+                  be reversed. Deleted data can not be recovered.
                 </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1h8ng64 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-1rp4bhw r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-el9fpp r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-16kf3px r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-zpf9xq r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-11bz3f3 r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1h8ng64 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-1rp4bhw r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-el9fpp r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-16kf3px r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-zpf9xq r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-11bz3f3 r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1h8ng64 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderColor-1rp4bhw r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1j3d57o r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1gvyc6z r-borderColor-1fwaayb r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1vfzgvq r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-tg9xy0 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1oaetuo r-borderColor-uu4yxx r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-c4gyn4 r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1bbz6r5 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1ofg2t7 r-borderColor-16z9ajc r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1m04atk r-paddingRight-1pyaxff r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jls995 r-fontSize-1enofrn r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1j3d57o r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1gvyc6z r-borderColor-1fwaayb r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1vfzgvq r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-tg9xy0 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1oaetuo r-borderColor-uu4yxx r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-c4gyn4 r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1bbz6r5 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1ofg2t7 r-borderColor-16z9ajc r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-f727ji r-paddingRight-j2kj52 r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jls995 r-fontSize-1b43r93 r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1j3d57o r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1gvyc6z r-borderColor-1fwaayb r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-84gixx r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1vfzgvq r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-tg9xy0 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1oaetuo r-borderColor-uu4yxx r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-159ydal r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-c4gyn4 r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1bbz6r5 r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1qar9k r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1ofg2t7 r-borderColor-16z9ajc r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jbrlb3 r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww"
-                >
-                  Button
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="button"
-            tabindex="0"
-            class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-1niwhzg r-borderRadius-z2wwpe r-cursor-1loqt21 r-flexDirection-18u37iz r-justifyContent-1777fci r-outlineWidth-10paoce r-paddingBottom-xd6kpl r-paddingLeft-1qhn6m8 r-paddingRight-i023vh r-paddingTop-tskmnb r-touchAction-1otgn73 r-userSelect-lrvibr"
-          >
-            <div
-              class="css-view-1dbjc4n r-alignItems-1awozwy r-flexDirection-18u37iz r-gap-1cmwbt1"
-            >
-              <div class="css-view-1dbjc4n">
-                <div
-                  dir="auto"
-                  class="css-text-901oao r-color-1jls995 r-fontSize-ubezar r-fontStyle-13uqrnb r-fontWeight-majxgm r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textDecorationLine-1ddef8g"
-                >
-                  Button
+                <div class="btn-group">
+                  <div
+                    class="outline-variant outline-red"
+                    data-component-props='{"instance": "Button-outline", "variant": "red-medium" }'
+                  >
+                    <div role="button">Submit</div>
+                  </div>
+                  <div
+                    class="solid-variant solid-red"
+                    data-component-props='{"instance": "Button-solid", "variant": "red-medium" }'
+                  >
+                    <div role="button">Submit</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1371,23 +336,5 @@
         </div>
       </div>
     </div>
-    <script src="/_next/static/chunks/react-refresh.js?ts=1660816767622"></script>
-    <script id="__NEXT_DATA__" type="application/json">
-      {
-        "props": {
-          "pageProps": {
-            "jsonFileData": "{\n  \"colorScheme\": {\n    \"name\": \"colorScheme\",\n    \"type\": { \"name\": \"string\", \"required\": true },\n    \"defaultValue\": \"solid\",\n    \"options\": [\"pink\", \"blue\", \"green\"],\n    \"control\": {\n      \"type\": \"select\"\n    }\n  },\n  \"variant\": {\n    \"name\": \"variant\",\n    \"type\": { \"name\": \"string\", \"required\": true },\n    \"defaultValue\": \"solid\",\n    \"options\": [\"solid\", \"outline\", \"link\"],\n    \"control\": {\n      \"type\": \"radio\"\n    }\n  },\n  \"children\": {\n    \"name\": \"children\",\n    \"type\": {\n      \"name\": \"string\",\n      \"required\": true\n    },\n    \"defaultValue\": \"Button\",\n    \"control\": {\n      \"type\": \"text\"\n    }\n  },\n  \"isHovered\": {\n    \"name\": \"isHovered\",\n    \"type\": { \"name\": \"boolean\" },\n    \"defaultValue\": false,\n\n    \"control\": {\n      \"type\": \"boolean\"\n    }\n  },\n  \"sizes\": {\n    \"name\": \"size\",\n    \"type\": {\n      \"name\": \"string\"\n    },\n    \"defaultValue\": \"md\",\n    \"control\": {\n      \"type\": \"select\"\n    },\n    \"options\": [\"sm\", \"md\", \"lg\"]\n  }\n}\n",
-            "filename": "Button"
-          },
-          "__N_SSG": true
-        },
-        "page": "/htmlPreview/[[...slug]]",
-        "query": { "slug": ["Button"] },
-        "buildId": "development",
-        "isFallback": false,
-        "gsp": true,
-        "scriptLoader": []
-      }
-    </script>
   </body>
 </html>
